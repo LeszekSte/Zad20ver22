@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.themleaf.org">
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Formularz</title>
+
+</head>
+<body>
+<div style="margin-left: 20px">
+    <h5>Dodaj owoc</h5>
+    <form th:object="${newFruit}" action="/addFruit" method="post" >
+        <br>Nazwa</br>
+        <input type="text" th:field="*{name}"/><br>
+        <br>Cena</br>
+        <input type="number" th:field="*{price}"/><br>
+        <input type="submit" value="OK">
+    </form>
+</div>
+
+</body>
+</html>
